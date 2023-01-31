@@ -10,7 +10,7 @@ Write a program that asks the user to enter the number of packages purchased. Th
 Sample Run Enter number of packages purchased: 50↵ Your discount is: $1980.00 Your total is: $2970.00
  */
 
-public class PosMachine {
+public class SoftwareSales {
     public static void main(String[] args) {
         Scanner stdin = new Scanner(System.in);
         final int regular_price = 99;
@@ -23,30 +23,33 @@ public class PosMachine {
 
         //login here
         if(num_of_items >=1 && num_of_items <=9){
-            discount = 0 * total;
-            net_total = total - discount;
-            System.out.printf("Your discount is: %.2f\n", discount);
-            System.out.printf("Your total is: $%.2f\n", net_total );
+            discount = 0;
+            System.out.printf("Your discount is: $%.2f\n", discount);
+            System.out.printf("Your total is: $%.2f\n", total );
         }else if (num_of_items >=10 && num_of_items <=19){
             discount = 0.2 * total;
             net_total = total - discount;
-            System.out.printf("Your discount is: %.2f\n", discount);
+            System.out.printf("Your discount is: $%.2f\n", discount);
             System.out.printf("Your total is: $%.2f\n", net_total );
         }else if (num_of_items >=20 && num_of_items <=49){
             discount = 0.3 * total;
             net_total = total - discount;
-            System.out.printf("Your discount is: %.2f\n", discount);
+            System.out.printf("Your discount is: $%.2f\n", discount);
             System.out.printf("Your total is: $%.2f\n", net_total );
         }else if (num_of_items >=50 && num_of_items <=99){
             discount = 0.4 * total;
             net_total = total - discount;
-            System.out.printf("Your discount is: %.2f\n", discount);
+            System.out.printf("Your discount is: $%.2f\n", discount);
             System.out.printf("Your total is: $%.2f\n", net_total );
         }else if (num_of_items >=100){
             discount = 0.5 * total;
             net_total = total - discount;
-            System.out.printf("Your discount is: %.2f\n", discount);
+            System.out.printf("Your discount is: $%.2f\n", discount);
             System.out.printf("Your total is: $%.2f\n", net_total );
+        }else{
+            discount = 0;
+            System.out.printf("Your discount is: $%.2f\n", discount);
+            System.out.printf("Your total is: $%.2f\n", total );
         }
     }
 }
