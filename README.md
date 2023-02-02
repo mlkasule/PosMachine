@@ -1,4 +1,4 @@
-# POS Machine
+# Point Of Sale Machine
 A software company sells a package at the regular price of $99. Quantity discounts are given according to the following table:
 
 Quantity        Discount 
