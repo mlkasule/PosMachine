@@ -5,7 +5,7 @@ public class GroceryList {
 
     public static void main(String[] args) throws IOException {
 
-        String grocery_item;
+        String journal_item;
         String fileName;
 
         Scanner input = new Scanner(System.in);
@@ -20,22 +20,25 @@ public class GroceryList {
             PrintWriter outputFile = new PrintWriter(fileName);
 
             //print in terminal
-            System.out.println("Enter grocery items below ");
-            System.out.println("====Press enter save item or exit to close====");
+            System.out.print("Enter title of your journal");
+            String title = input.nextLine();
+
+            System.out.println("Enter " + title +  "items below");
+            System.out.println("====Press enter to save items or type exit to close====");
 
             //print in file
-            outputFile.println("GROCERY LIST");
+            outputFile.println(title + " LIST");
             outputFile.println("=============================");
 
             //watch for exit keyword
             while(input.hasNext()){
-                grocery_item = input.nextLine();
+                journal_item = input.nextLine();
 
-                if(grocery_item.equalsIgnoreCase("exit")){
+                if(journal_item.equalsIgnoreCase("exit")){
                     outputFile.close();
                     System.exit(0);
                 }else{
-                    outputFile.println(grocery_item);
+                    outputFile.println(journal_item);
                 }
             }
 
@@ -56,13 +59,13 @@ public class GroceryList {
 
             //watch for exit keyword
             while (input.hasNext()) {
-                grocery_item = input.nextLine();
+                journal_item = input.nextLine();
 
-                if (grocery_item.equalsIgnoreCase("exit")) {
+                if (journal_item.equalsIgnoreCase("exit")) {
                     oldFile.close();
                     System.exit(0);
                 } else {
-                    oldFile.println(grocery_item);
+                    oldFile.println(journal_item);
                 }
             }
         }else{
