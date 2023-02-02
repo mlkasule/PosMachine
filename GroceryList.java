@@ -23,7 +23,7 @@ public class GroceryList {
             System.out.print("Enter title of your journal");
             String title = input.nextLine();
 
-            System.out.println("Enter " + title +  "items below");
+            System.out.println("Enter " + title +  " items below");
             System.out.println("====Press enter to save items or type exit to close====");
 
             //print in file
